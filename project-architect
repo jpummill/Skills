@@ -1,0 +1,25 @@
+---
+name: project-architect
+description: Use this skill when the user wants to create an development plan for an existing project from scratch. It handles development planning and  additional folder creation.
+---
+
+# Project Launch Standards
+
+## 1. The Workflow
+When this skill is triggered, follow these steps in order:
+
+### Phase A: Discovery
+Analyze the current status of the project:
+1. Review existing project folders and files to determine what has already been created.
+
+### Phase B: Enhancement
+Ask the user the following two questions specifically:
+1. "What is the core purpose and primary tech stack of this project?"
+2. "Are there any specific third-party integrations or unique constraints I should know about?"
+
+### Phase C: Planning
+1. Create a `DEVPLAN.md` file.
+2. Draft a phased roadmap (Phase 1: MVP, Phase 2: Features, etc.).
+3. Define and create any additional required directories.
+4. **Stage Files** Stage all updated files in the repository. 
+5. **Commit Changes** Commit all changes to the repository with the commit message "Added Development Plan"".
