@@ -1,0 +1,25 @@
+---
+name: project-launcher
+description: Use this skill when the user wants to start a new project from scratch. It handles folder creation, template copying, and development planning.
+---
+
+# Project Launch Standards
+
+## 1. The Workflow
+When this skill is triggered, follow these steps in order:
+
+### Phase A: Initialization
+1. **Root Folder:** Create a target directory for the project based on the description given by the user.  Use the `mkdir` command to create the directory.
+2. **Template Injection:** copy the `AGENTS.md` template from the users templates folder into the new project root.
+   - *Command:* `cp ~/templates/AGENTS.md ./` (
+3. **Initialize Git** Use the 'git init' command to initialize git in the new project directory
+4. **Git Ignore** Create the .gitignore file and add the following entries "venv", ".env"
+5. **Stage Files** Stage all files in the repository except those contained in the .gitignore file.
+6. **Commit Changes** Commit all changes to the repository with the commit message "First Commit".
+
+### Phase B: Planning
+1. Create a `DEVPLAN.md` file.
+2. Draft a phased roadmap (Phase 1: MVP, Phase 2: Features, etc.).
+3. Define the directory structure in this file (e.g., `/src`, `/tests`, `/docs`).
+4. **Stage Files** Stage all updated files in the repository. 
+5. **Commit Changes** Commit all changes to the repository with the commit message "Added Development Plan"".
