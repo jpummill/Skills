@@ -1,0 +1,15 @@
+---
+name: doc-standardizer
+description: Use this skill when asked to write or update documentation, READMEs, or code comments to ensure they follow project-specific branding and formatting.
+---
+
+# Documentation Standards
+When this skill is active, apply these specific rules:
+1. **Tone:** Professional, concise, and helpful.
+2. **Emojis:** Use 🚀 for features, 🐛 for bug fixes, and 📝 for documentation.
+3. **Structure:** Every README must have a "Quick Start" section before "Installation."
+4. **Code Comments:** Use JSDoc format for all functions, including `@param` and `@returns`.
+
+## Example Format
+### 🚀 Feature Name
+Brief description of what this does.
