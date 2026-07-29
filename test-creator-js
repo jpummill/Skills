@@ -1,0 +1,18 @@
+---
+name: test-creator-js
+description: Use this skill when the user asks to write tests, add test coverage, or create a new test file for a component/function written in Javascript or Typescript.
+---
+
+# Testing Standards
+When generating tests, follow these strict rules:
+1. **Framework:** Use **Vitest** (or Jest/Mocha) with **React Testing Library**.
+2. **Naming:** Test files must be named `[filename].test.ts`.
+3. **Pattern:** Use the **AAA Pattern** (Arrange, Act, Assert).
+4. **Mocks:** Always mock external API calls using `vi.mock()`.
+5. **Coverage:** Aim for 100% branch coverage for the primary logic.
+
+## Workflow
+1. Read the source file to understand the logic.
+2. Check `package.json` to verify test dependencies.
+3. Generate the test file.
+4. **Self-Correction:** Run `npm test [filename]` after creating the file. If it fails, fix the code automatically.
