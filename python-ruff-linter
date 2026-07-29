@@ -1,0 +1,27 @@
+---
+name: python-ruff-linter
+description: Use this skill to check Python code for errors, style violations, and formatting issues. Trigger this after writing new code or when the user asks to "clean up" or "lint" the project.
+---
+
+# Python Linting & Formatting Standards
+
+## 1. Primary Tool: Ruff
+- **Check:** Use `ruff check .` to find logical errors and lint violations.
+- **Fix:** Use `ruff check --fix .` to automatically resolve fixable issues (like unused imports).
+- **Format:** Use `ruff format .` to ensure PEP 8 compliance.
+
+## 2. Rules & Priorities
+- **Imports:** Ensure imports are sorted (Ruff handles this via the `I` category).
+- **Complexity:** Flag functions with high cyclomatic complexity (over 10).
+- **Naming:** Enforce `snake_case` for variables/functions and `PascalCase` for classes.
+
+## 3. Workflow
+1. **Identify:** Check if `ruff` is installed in the current environment (`pip show ruff`).
+2. **Execute:** Run the linting check on the specific file or the whole directory.
+3. **Report:** Summarize the findings to the user.
+4. **Auto-Fix:** If errors are found, ask: "Should I automatically fix the linting errors and reformat the code?"
+5. **Verify:** Run the check one last time after fixes are applied.
+
+## 4. Example Terminal Commands
+- `python -m ruff check filename.py`
+- `python -m ruff format filename.py`
